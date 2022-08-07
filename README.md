@@ -15,7 +15,7 @@ Each week we will update this repository with the material used in this week.
 
 ## Lectures Schedule
 
-| Lecture | Week | Topic                                   | Speaker (tentative)           |
+| Lecture | Week | Topic                                   | Speaker                       |
 |---------|------|-----------------------------------------|-------------------------------|
 | 1       | 35   | Intro to concurrency & Mutual exclusion | Jørgen+Raúl                   |
 | 2       | 36   | Shared memory I                         | Raúl                          |
