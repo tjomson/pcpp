@@ -15,23 +15,23 @@ Each week we will update this repository with the material used in this week.
 
 ## Lectures Schedule
 
-| Lecture | Week | Topic                                   | Speaker                       |
-|---------|------|-----------------------------------------|-------------------------------|
-| 1       | 35   | Intro to concurrency & Mutual exclusion | Jørgen+Raúl                   |
-| 2       | 36   | Shared memory I                         | Raúl                          |
-| 3       | 37   | Shared memory II                        | Raúl                          |
-| 4       | 38   | Testing & Verification                  | Raúl                          |
-| 5       | 39   | Performance measurements                | Jørgen                        |
-| 6       | 40   | Performance and scalability             | Raúl                          |
-| 7       | 41   | Streams                                 | Jørgen                        |
-|         | 42   | *No Lecture: Fall break*                |                               |
-| 8       | 43   | Guest lecture                           | Viet Yen Nguyen (Hypefactors) |
-| 9       | 44   | React                                   | Jørgen                        |
-| 10      | 45   | Lock free data structures               | Raúl                          |
-| 11      | 46   | Message passing I                       | Raúl                          |
-| 12      | 47   | Message passing II                      | Raúl                          |
-| 13      | 48   | TBD                                     | Frederik                      |
-| 14      | 49   | Exam prep                               | Jørgen+Raúl                   |
+| Lecture | Week | Topic                                              | Speaker                       |
+|---------|------|----------------------------------------------------|-------------------------------|
+| 1       | 35   | [Intro to concurrency & Mutual exclusion](week01/) | Jørgen+Raúl                   |
+| 2       | 36   | Shared memory I                                    | Raúl                          |
+| 3       | 37   | Shared memory II                                   | Raúl                          |
+| 4       | 38   | Testing & Verification                             | Raúl                          |
+| 5       | 39   | Performance measurements                           | Jørgen                        |
+| 6       | 40   | Performance and scalability                        | Raúl                          |
+| 7       | 41   | Streams                                            | Jørgen                        |
+|         | 42   | *No Lecture: Fall break*                           |                               |
+| 8       | 43   | Guest lecture                                      | Viet Yen Nguyen (Hypefactors) |
+| 9       | 44   | React                                              | Jørgen                        |
+| 10      | 45   | Lock free data structures                          | Raúl                          |
+| 11      | 46   | Message passing I                                  | Raúl                          |
+| 12      | 47   | Message passing II                                 | Raúl                          |
+| 13      | 48   | TBD                                                | Frederik                      |
+| 14      | 49   | Exam prep                                          | Jørgen+Raúl                   |
 
 
 ## Oral Feedback Sessions Schedule
