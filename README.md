@@ -23,7 +23,7 @@ Each week we will update this repository with the material used in this week.
 | 4       | 38   | Testing & Verification                             | Raúl                          |
 | 5       | 39   | Performance measurements                           | Jørgen                        |
 | 6       | 40   | Performance and scalability                        | Raúl                          |
-| 7       | 41   | Streams                                            | Jørgen                        |
+| 7       | 41   | Parallel Streams                                   | Jørgen                        |
 |         | 42   | *No Lecture: Fall break*                           |                               |
 | 8       | 43   | Guest lecture                                      | Viet Yen Nguyen (Hypefactors) |
 | 9       | 44   | React                                              | Jørgen                        |
@@ -48,6 +48,6 @@ Remember that when you book a slot in the [scheduler in LearnIT (to appear)](#),
 | 6           | 40            | Shared memory II + Testing & Verification                 |
 |             | 42            | *No oral feedback sessions: Fall break*                   |
 | 8           | 43            | Performance measurements + Performance and scalability    |
-| 11          | 46            | Streams + React                                           |
+| 11          | 46            | Parallel Streams + React                                  |
 | 13          | 48            | Lock-free data structure + Message passing I              |
 | 14          | 49            | Message passing II                                        |
