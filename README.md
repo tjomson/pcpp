@@ -37,7 +37,7 @@ Each week we will update this repository with the material used in this week.
 ## Oral Feedback Sessions Schedule
 
 The schedule below shows the weeks when we will have [oral feedback sessions](general-info/assignment-submissions-and-oral-feedback.md).
-Note that this schedule is preliminary and subject to changes. 
+Note that this schedule is preliminary and subject to changes.
 More precisely, **the dates of the oral feedback sessions will not change**, but the exercises included in each session may vary.
 
 Remember that when you book a slot in the [scheduler in LearnIT (to appear)](#), the **slot is recurrent, i.e., it is for all the weeks below in the day of the week and time that you selected**.
