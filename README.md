@@ -32,3 +32,22 @@ Each week we will update this repository with the material used in this week.
 | 12      | 47   | Message passing II                      | Raúl                          |
 | 13      | 48   | TBD                                     | Frederik                      |
 | 14      | 49   | Exam prep                               | Jørgen+Raúl                   |
+
+
+## Oral Feedback Sessions Schedule
+
+The schedule below shows the weeks when we will have [oral feedback sessions](general-info/assignment-submissions-and-oral-feedback.md).
+Note that this schedule is preliminary and subject to changes. 
+More precisely, **the dates of the oral feedback sessions will not change**, but the exercises included in each session may vary.
+
+Remember that when you book a slot in the [scheduler in LearnIT (to appear)](#), the **slot is recurrent, i.e., it is for all the weeks below in the day of the week and time that you selected**.
+
+| Course week | Calendar Week | Exercises                                                 |
+|-------------|---------------|-----------------------------------------------------------|
+| 4           | 38            | Intro to concurrency & Mutual exclusion + Shared memory I |
+| 6           | 40            | Shared memory II + Testing & Verification                 |
+|             | 42            | *No oral feedback sessions: Fall break*                   |
+| 8           | 43            | Performance measurements + Performance and scalability    |
+| 11          | 46            | Streams + React                                           |
+| 13          | 48            | Lock-free data structure + Message passing I              |
+| 14          | 49            | Message passing II                                        |
