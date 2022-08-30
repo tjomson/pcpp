@@ -21,7 +21,7 @@ The goals of this lecture are:
   * Chapter 2, Sections 2.1 to 2.4, and 2.6 (omit the details of proofs) | 11 pages
   * Chapter 7, Section 7.1 | 4 pages
 
-* Staunstrup
+* Staunstrup & Pardo
   * [Concurrency note](concurrencyNotes/concurrencyPCPP.pdf)
   
 ### Optional readings
