@@ -40,7 +40,7 @@ The schedule below shows the weeks when we will have [oral feedback sessions](ge
 Note that this schedule is preliminary and subject to changes.
 More precisely, **the dates of the oral feedback sessions will not change**, but the exercises included in each session may vary.
 
-Remember that when you book a slot in the [scheduler in LearnIT (to appear)](#), the **slot is recurrent, i.e., it is for all the weeks below in the day of the week and time that you selected**.
+Remember that when you book a slot in the [scheduler in LearnIT](https://learnit.itu.dk/mod/scheduler/view.php?id=161438), the **slot is recurrent, i.e., it is for all the weeks below in the day of the week and time that you selected**.
 
 | Course week | Calendar Week | Exercises                                                 |
 |-------------|---------------|-----------------------------------------------------------|

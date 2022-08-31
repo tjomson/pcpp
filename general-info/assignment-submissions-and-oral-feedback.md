@@ -41,7 +41,7 @@ All members of a group should contribute, so prepare who will (primarily) talk a
 ### Booking
 Each group needs to join a 40min slot for oral feedback with TAs or teachers.
 Note that slots allow for 6 people, so more than one group can join a slot.
-**You must book a 40min slot using the scheduler activity from LearnIT ([to appear](#)).**
+**You must book a 40min slot using the [scheduler activity from LearnIT](https://learnit.itu.dk/mod/scheduler/view.php?id=161438).**
 The slot you choose is recurrent: it will take place on weeks 38, 40, 43, 46, 48 and 49 on the selected day and time.
 Any member of the group can book the slot on behalf of the group.
 TAs and teachers will make available several 40min slots from which you can choose.
