@@ -36,7 +36,7 @@ The goals of this lecture are:
 
 ## Exercises
 
-To appear.
+See file [exercises01.pdf](exercises01.pdf).
 
 ## Lecture slides
 
