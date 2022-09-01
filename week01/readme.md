@@ -40,4 +40,4 @@ See file [exercises01.pdf](exercises01.pdf).
 
 ## Lecture slides
 
-To appear.
+See file [lecture01.pdf](lecture01.pdf).
