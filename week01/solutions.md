@@ -28,6 +28,18 @@ Splitting the incrementation into a line containing `var temp = count` and anoth
 
 There are no difference in the assembly.
 
+```
+public void increment();
+    Code:
+       0: aload_0
+       1: dup
+       2: getfield      #7                  // Field count:J
+       5: lconst_1
+       6: ladd
+       7: putfield      #7                  // Field count:J
+      10: return
+```
+
 Create 3 copies of TestLongCounterExperiments, with different implementations.
 
 Then run with gradle (to build class files) and dissasemble with javap (to compare assembly):
