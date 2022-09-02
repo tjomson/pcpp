@@ -21,7 +21,7 @@ git remote add pcpp git@github.itu.dk:jst/PCPP2022-public
 ## Usage
 
 Pull from course repo: 
-`git pull pcpp`
+`git pull pcpp main`
 
 Pull from tjomson repo: 
 `git pull`
