@@ -1,7 +1,5 @@
 # Assignments & Oral Feedback
 
-**NOTE: The content of this page is preliminary and subject to changes**
-
 ## Assignment Submission
 
 Assignments are submitted bi-weekly in groups of 2-3 people.
