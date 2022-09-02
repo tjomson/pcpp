@@ -23,3 +23,21 @@ Right before updating the counter, we lock the lock, such that only the current 
 ## 5
 
 Splitting the incrementation into a line containing `var temp = count` and another line `count = temp+1`, it is not possible to put just one of them in the critical section, without causing race conditions. So current solution is already optimal
+
+## 6
+
+There are no difference in the assembly.
+
+Create 3 copies of TestLongCounterExperiments, with different implementations.
+
+Then run with gradle (to build class files) and dissasemble with javap (to compare assembly):
+
+```bash
+gradle -p code-exercises/week01exercises/ -PmainClass=exercises01.TestLongCounterExperiments1 run
+gradle -p code-exercises/week01exercises/ -PmainClass=exercises01.TestLongCounterExperiments2 run
+gradle -p code-exercises/week01exercises/ -PmainClass=exercises01.TestLongCounterExperiments3 run
+
+javap -c code-exercises/week01exercises/app/build/classes/java/main/exercises01/TestLongCounterExperiments1\$LongCounter.class
+javap -c code-exercises/week01exercises/app/build/classes/java/main/exercises01/TestLongCounterExperiments2\$LongCounter.class
+javap -c code-exercises/week01exercises/app/build/classes/java/main/exercises01/TestLongCounterExperiments3\$LongCounter.class
+```
