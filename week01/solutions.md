@@ -59,3 +59,23 @@ javap -c code-exercises/week01exercises/app/build/classes/java/main/exercises01/
 Expected value will be somewhere between -10_000_000 and 10_000_000
 
 To fix, adding a lock that we lock right before incrementing or decrementing, and then unlocking afterwards. Ensures only one thread can mutate count at a time.
+
+## 9
+
+Min-value is 2
+
+Example with `counts=5` :
+
+```
+count : 0       1       2       3       4    1          2       3       4       5    2
+t1    :   r1 w1   r2 w2   r3 w3   r4 w4        r5                                 w5  
+t2    :   r1                              w1      r2 w2   r3 w3   r4 w4   r5 w5       
+
+where:
+
+count is Shared memory
+t1    is Thread 1
+t2    is Thread 2
+r     is Read
+w     is write
+```
