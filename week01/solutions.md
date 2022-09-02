@@ -53,3 +53,9 @@ javap -c code-exercises/week01exercises/app/build/classes/java/main/exercises01/
 javap -c code-exercises/week01exercises/app/build/classes/java/main/exercises01/TestLongCounterExperiments2\$LongCounter.class
 javap -c code-exercises/week01exercises/app/build/classes/java/main/exercises01/TestLongCounterExperiments3\$LongCounter.class
 ```
+
+## 7
+
+Expected value will be somewhere between -10_000_000 and 10_000_000
+
+To fix, adding a lock that we lock right before incrementing or decrementing, and then unlocking afterwards. Ensures only one thread can mutate count at a time.
