@@ -11,7 +11,7 @@ The goals of this lecture are:
 ## Readings 
 
 * Goetz:
-  * Chapter 3, Sections 3.4 and 3.5. *(it was part of th readings for last week)*.
+  * Chapter 3, Sections 3.4 and 3.5. *(it was part of the readings for last week)*.
   * Chapter 4, complete.
   * Chapter 5, complete.
 
