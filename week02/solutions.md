@@ -36,3 +36,7 @@ Sum is 1148444,000000 and should be 2000000,000000
 Sum is 1973120,000000 and should be 2000000,000000
 
 There are race conditions.
+
+## 2.3.2
+
+Static synchronized means that the lock applies to the static class and not the object instance. This means that when addStatic wants to increment, then addInstance can still access the critical section, thus causing race conditions.
