@@ -29,3 +29,10 @@ No. The variable that the get-thread uses will not be synced with the main threa
 ## 2.2.4
 
 Yes. A volatile variable is always stored in main memory, i.e. it will not be cached for threads. Therefor visibility is guaranteed, and thread 't' will "see" the change in value.
+
+## 2.3.1
+Sum is 1142148,000000 and should be 2000000,000000
+Sum is 1148444,000000 and should be 2000000,000000
+Sum is 1973120,000000 and should be 2000000,000000
+
+There are race conditions.
