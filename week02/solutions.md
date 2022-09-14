@@ -24,4 +24,8 @@ Adding the intrinsic locks with `synchronized` on the get-method, causes the var
 
 ## 2.2.3
 
-No. The variable that the get-thread uses will not be synced with the main thread, thus the variable might always be 0
+No. The variable that the get-thread uses will not be synced with the main thread, thus the variable might always be 0.
+
+## 2.2.4
+
+Yes. A volatile variable is always stored in main memory, i.e. it will not be cached for threads. Therefor visibility is guaranteed, and thread 't' will "see" the change in value.
