@@ -18,10 +18,12 @@ public class ReadWriteMonitorIntrinsic {
     }
 
     public synchronized void writeLock() throws InterruptedException {
-        while (readers > 0 || writer) {
+        while (writer)
+            this.wait();
+        writer = true;
+        while (readers > 0) {
             this.wait();
         }
-        writer = true;
     }
 
     public synchronized void writeUnlock() {
