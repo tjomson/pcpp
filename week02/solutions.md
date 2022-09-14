@@ -40,3 +40,7 @@ There are race conditions.
 ## 2.3.2
 
 Static synchronized means that the lock applies to the static class and not the object instance. This means that when addStatic wants to increment, then addInstance can still access the critical section, thus causing race conditions.
+
+## 2.3.3
+
+Having a static Lock, that both static methods and instance methods can access, means that mutual exclusion can be achieved.
