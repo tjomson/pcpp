@@ -10,17 +10,15 @@ public class TestMutableInteger {
 			var x = 0;
 			while (mi.get() == 0) // Loop while zero
 			{
-				System.out.println(x);
-				x++;
 				/* Do nothing */ }
 			System.out.println("I completed, mi = " + mi.get());
 		});
 		t.start();
-		// try {
-		// Thread.sleep(500);
-		// } catch (InterruptedException e) {
-		// e.printStackTrace();
-		// }
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		mi.set(42);
 		System.out.println("mi set to 42, waiting for thread ...");
 		try {
