@@ -22,6 +22,8 @@ See TestMutableInteger for implementation
 
 Adding the intrinsic locks with `synchronized` on the get-method, causes the variable stored in the threads cache to be synced with main memory, each time the thread 't' calls get().
 
+Happens-before guarantees visibility.
+
 ## 2.2.3
 
 No. The variable that the get-thread uses will not be synced with the main thread, thus the variable might always be 0.
@@ -29,6 +31,8 @@ No. The variable that the get-thread uses will not be synced with the main threa
 ## 2.2.4
 
 Yes. A volatile variable is always stored in main memory, i.e. it will not be cached for threads. Therefor visibility is guaranteed, and thread 't' will "see" the change in value.
+
+^ this is not actually what happens, a thread will always store the variable in the cache, but the thread will be forced to look in main memory
 
 ## 2.3.1
 Sum is 1142148,000000 and should be 2000000,000000

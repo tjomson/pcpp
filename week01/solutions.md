@@ -11,6 +11,8 @@ We get 200 every time. The reason for this is that there is a lower chance for r
 We calculated the chance for a non-skipped number to be 19926221/20000000 = 99.63%
 Meaning it is unlikely with low numbers, that it skips.
 
+Due to scheduling
+
 ## 3
 
 Don't think it makes any difference, as the compiled result still creates a temp-variable and then assigns count.
