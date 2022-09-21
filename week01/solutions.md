@@ -117,3 +117,10 @@ See CounterThreads2Covid.java line 39-42
 ## 2
 
 We ensure that only one thread can access the critical section at a time using the locks. Inside the critical section, we also check whether the max number of people has been reached before incrementing.
+
+# E1.4
+
+## 1
+
+A website that accesses an API fall under Goetz' "convenience", because it splits the tasks between two applications. This does not apply to "hidden" in the notes, as the website can not work as if it has sole ownership without the API.
+
