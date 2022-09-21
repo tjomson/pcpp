@@ -107,3 +107,13 @@ Now we lock before printing, and unlock when done printing. This means that a th
 ## 4
 
 Because an 'unlock()' must happen before a 'lock()', once one of the threads start executing its loop body (critical section), i.e. makes a call to 'lock()', the other thread must wait until the executing thread calls 'unlock()'.
+
+# E1.3
+
+## 1
+
+See CounterThreads2Covid.java line 39-42
+
+## 2
+
+We ensure that only one thread can access the critical section at a time using the locks. Inside the critical section, we also check whether the max number of people has been reached before incrementing.
