@@ -86,7 +86,7 @@ w     is write
 
 ## 1 
 
-See Printer.java and PrinterRun.java.
+See PrinterStuff.java
 
 ## 2
 
@@ -97,3 +97,10 @@ See Printer.java and PrinterRun.java.
 t1(1) t1(2) t2(1) t2(2) ... 
 
 The two threads might be schedueled, such that while t1 sleeps t2 enters the core and begins executing.
+
+## 3
+
+See the added lock in PrinterStuff.java
+
+Now we lock before printing, and unlock when done printing. This means that a thread will always print "-|" completely before another thread can print, thus avoiding the interleaving that causes the incorrect output
+
