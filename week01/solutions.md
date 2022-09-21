@@ -104,3 +104,6 @@ See the added lock in PrinterStuff.java
 
 Now we lock before printing, and unlock when done printing. This means that a thread will always print "-|" completely before another thread can print, thus avoiding the interleaving that causes the incorrect output
 
+## 4
+
+Because an 'unlock()' must happen before a 'lock()', once one of the threads start executing its loop body (critical section), i.e. makes a call to 'lock()', the other thread must wait until the executing thread calls 'unlock()'.
