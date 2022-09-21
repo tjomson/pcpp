@@ -1,5 +1,7 @@
 # Solutions for week1
 
+# E1.1
+
 ## 1
 
 19926221
@@ -10,8 +12,6 @@ We get 200 every time. The reason for this is that there is a lower chance for r
 
 We calculated the chance for a non-skipped number to be 19926221/20000000 = 99.63%
 Meaning it is unlikely with low numbers, that it skips.
-
-Due to scheduling
 
 ## 3
 
@@ -81,3 +81,19 @@ t2    is Thread 2
 r     is Read
 w     is write
 ```
+
+# E1.2
+
+## 1 
+
+See Printer.java and PrinterRun.java.
+
+## 2
+
+1 = System.out.print("-");
+2 = try { Thread.sleep(50); } catch (InterruptedException exn) {}
+3 = System.out.print("|");
+
+t1(1) t1(2) t2(1) t2(2) ... 
+
+The two threads might be schedueled, such that while t1 sleeps t2 enters the core and begins executing.
