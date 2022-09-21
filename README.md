@@ -17,8 +17,8 @@ Each week we will update this repository with the material used in this week.
 | 1       | 35   | [Intro to concurrency & Mutual exclusion](week01/) | Jørgen+Raúl                   |
 | 2       | 36   | [Shared memory I](week02/)                         | Raúl                          |
 | 3       | 37   | [Shared memory II](week03/)                        | Raúl                          |
-| 4       | 38   | Testing & Verification                             | Raúl                          |
-| 5       | 39   | Performance measurements                           | Jørgen                        |
+| 4       | 38   | [Testing & Verification](week04/)                  | Raúl                          |
+| 5       | 39   | [Performance measurements](week05/)                | Jørgen                        |
 | 6       | 40   | Performance and scalability                        | Raúl                          |
 | 7       | 41   | Parallel Streams                                   | Jørgen                        |
 |         | 42   | *No Lecture: Fall break*                           |                               |
