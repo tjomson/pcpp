@@ -124,3 +124,18 @@ We ensure that only one thread can access the critical section at a time using t
 
 A website that accesses an API fall under Goetz' "convenience", because it splits the tasks between two applications. This does not apply to "hidden" in the notes, as the website can not work as if it has sole ownership without the API.
 
+## 2
+Hidden
+- Webservers hosting public websites.
+- Computers with multiple active users.
+
+
+Exploitation
+- GPU
+- ConDuck
+- Apache Spark
+
+Inherent
+- Smartphones
+- GPS devices
+- Laptop computer
