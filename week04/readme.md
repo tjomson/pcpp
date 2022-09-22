@@ -20,8 +20,8 @@ The goals of this lecture are:
 
 ## Lecture slides
 
-See file [lecture12.pdf (to appear)](#).
+See file [lecture12.pdf](./lecture12.pdf).
 
 ## Exercises
 
-See file [exercises12.pdf (to appear)](#).
+See file [exercises12.pdf](./exercises12.pdf).
