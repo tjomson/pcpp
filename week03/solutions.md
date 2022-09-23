@@ -35,6 +35,10 @@ It would not be thread-safe if multiple calls modify the zip and address fields 
 
 Additionally, only final fields of simple types are public, and thus cannot be modified.
 
+### 3
+
+See main method in Person.java
+
 ### 4
 
 No. Testing cannot be used to prove such properties, there are simply to many test cases. If proof is need, it must the created by other means, happens-before relations, via a proof assistant, via SAT, via SMT etc.
