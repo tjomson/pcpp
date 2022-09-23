@@ -5,21 +5,16 @@ import java.util.concurrent.locks.ReentrantLock;
 public class PrinterStuff {
     public static void main(String[] args) {
         Printer p = new Printer();
-        var lock = new ReentrantLock();
 
         Thread t1 = new Thread(() -> {
             while (true) {
-                lock.lock();
                 p.print();
-                lock.unlock();
             }
         });
 
         Thread t2 = new Thread(() -> {
             while (true) {
-                lock.lock();
                 p.print();
-                lock.unlock();
             }
         });
 
@@ -29,10 +24,14 @@ public class PrinterStuff {
 }
 
 class Printer {
+    ReentrantLock lock = new ReentrantLock();
+
     public void print() {
         System.out.print("-");
         try {
+            lock.lock();
             Thread.sleep(50);
+            lock.unlock();
         } catch (InterruptedException exn) {
             exn.printStackTrace();
         }
