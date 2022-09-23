@@ -42,3 +42,13 @@ See main method in Person.java
 ### 4
 
 No. Testing cannot be used to prove such properties, there are simply to many test cases. If proof is need, it must the created by other means, happens-before relations, via a proof assistant, via SAT, via SMT etc.
+
+## 3.3
+
+### 1
+
+See class SeeMyFord in SeeMyFord.java
+
+### 2 
+
+See class BerryR in BerryR.java
