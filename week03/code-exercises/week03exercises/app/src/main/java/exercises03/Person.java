@@ -14,12 +14,15 @@ public class Person {
 
     public Person() {
         class_lock.lock();
+        instance_lock.lock();
         id = ++_id;
+        instance_lock.unlock();
         class_lock.unlock();
     }
 
     public Person(long i) {
         class_lock.lock();
+        instance_lock.lock();
         if (_id == -1) {
             id = i;
             _id = i;
@@ -27,6 +30,7 @@ public class Person {
         else {
             id = ++_id;
         }
+        instance_lock.unlock();
         class_lock.unlock();
     }
 
