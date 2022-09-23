@@ -18,7 +18,7 @@ public class SeeMyFord {
         return;
     }
 
-    public synchronized boolean isEmpty() {
+    public synchronized boolean noPermits() {
         return permits == 0;
     }
 
