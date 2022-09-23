@@ -9,7 +9,7 @@ public class BerryR {
 
     public synchronized void await() throws InterruptedException {
         smf.acquire();
-        if (smf.isEmpty()) notifyAll();
+        if (smf.noPermits()) notifyAll();
         else wait();
     }
 
