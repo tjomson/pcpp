@@ -34,3 +34,7 @@ It would not be thread-safe if a reference to on of the String fields escape the
 It would not be thread-safe if multiple calls modify the zip and address fields of an object. This will not happen due to the instance level intrinsic lock, on the method changeZipAddr().
 
 Additionally, only final fields of simple types are public, and thus cannot be modified.
+
+### 4
+
+No. Testing cannot be used to prove such properties, there are simply to many test cases. If proof is need, it must the created by other means, happens-before relations, via a proof assistant, via SAT, via SMT etc.
