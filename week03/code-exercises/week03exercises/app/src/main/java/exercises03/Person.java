@@ -4,7 +4,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Person {
     private static long _id = -1;
-    private ReentrantLock class_lock = new ReentrantLock();
+    private static ReentrantLock class_lock = new ReentrantLock();
 
     public final long id;
     private String name;
