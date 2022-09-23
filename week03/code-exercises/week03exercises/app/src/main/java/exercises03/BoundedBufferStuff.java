@@ -50,6 +50,7 @@ public class BoundedBufferStuff {
 class BoundedBuffer<T> implements BoundedBufferInterface<T> {
     private Semaphore semInserter;
     private Semaphore semTaker;
+    private Semaphore lock = new Semaphore(1);
     private LinkedList<T> queue;
 
     public BoundedBuffer(int permits) {
@@ -61,14 +62,18 @@ class BoundedBuffer<T> implements BoundedBufferInterface<T> {
     @Override
     public void insert(T elem) throws Exception {
         semInserter.acquire();
+        lock.acquire();
         queue.add(elem);
+        lock.release();
         semTaker.release();
     }
 
     @Override
     public T take() throws Exception {
         semTaker.acquire();
+        lock.acquire();
         var item = queue.pop();
+        lock.release();
         semInserter.release();
         return item;
     }
