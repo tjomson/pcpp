@@ -38,9 +38,9 @@ Make sure you can also run   ` timingMultiplication.java `
 ## Lecture slides
 Could be updated, so please check that you have the latest version
 
-lecture05.pdf (not yet ready)
+[lecture05.pdf Preliminary version](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week05/Lecture05Preliminary.pdf)
 
 
 ## Exercises
 
-exercises05.pdf (not yet ready)
+[exercises05.pdf](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week05/exercises05.pdf)
