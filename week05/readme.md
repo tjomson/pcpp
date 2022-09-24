@@ -3,9 +3,10 @@
 ## Goals
 
 The goals of this lecture are:
+
 * Motivate the need for performance measurements
-* Show benchmarks for a number of Java concepts including: some math functions, object creation, threads, 
-   an algorithm for computing prime factors and a search algorithm.
+* Enable to perform performance measurements of your own code
+* Enable to  benchmark a number of Java concepts including: some math functions, object creation, threads,  an algorithm for computing prime factors and a search algorithm.
 * Introduce the statistics of benchmarking (normal distribution, mean and variance).
 * Make you aware off some pitfalls when using floating point numbers
 
