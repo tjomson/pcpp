@@ -42,6 +42,8 @@ See line 42 + 46 + 50, in ConcurrentIntegerSet.
 
 ### 4
 
+It all works now! 5000/5000 test runs for each test pass.
+
 ### 5
 
 Yes it does. It showes the existence of atleast one possible interleaving, in which the collection fails to behave as expected.
