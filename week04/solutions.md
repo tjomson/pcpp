@@ -56,10 +56,9 @@ size {
     1. return size
 }
 
-the set is empty
+the set contains 2
 t1 is size
-t2 is add 2
-t3 is remove 2
+t2 is remove 2
 
 Interleaving:
-t2(1),t2(2),t2(3),t3(1),t3(2),t1(1),t3(3)
+t2(1),t2(2),t1(1),t2(3)
