@@ -17,7 +17,7 @@ that can be found in the GitHub folder with course material for week 3
 
 You may skip sections 9-12.
 
-## To do before lecture 5 (files not yet uploaded)
+## To do before lecture 5
 During lecture 5 you will be asked to do some experiments on your own computer. 
 In order to do that you need to do:
 
