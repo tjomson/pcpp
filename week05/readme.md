@@ -3,9 +3,10 @@
 ## Goals
 
 The goals of this lecture are:
+
 * Motivate the need for performance measurements
-* Show benchmarks for a number of Java concepts including: some math functions, object creation, threads, 
-   an algorithm for computing prime factors and a search algorithm.
+* Enable to perform performance measurements of your own code
+* Enable to  benchmark a number of Java concepts including: some math functions, object creation, threads,  an algorithm for computing prime factors and a search algorithm.
 * Introduce the statistics of benchmarking (normal distribution, mean and variance).
 * Make you aware off some pitfalls when using floating point numbers
 
@@ -16,7 +17,7 @@ that can be found in the GitHub folder with course material for week 3
 
 You may skip sections 9-12.
 
-## To do before lecture 5 (files not yet uploaded)
+## To do before lecture 5
 During lecture 5 you will be asked to do some experiments on your own computer. 
 In order to do that you need to do:
 
@@ -37,9 +38,9 @@ Make sure you can also run   ` timingMultiplication.java `
 ## Lecture slides
 Could be updated, so please check that you have the latest version
 
-lecture05.pdf (not yet ready)
+[lecture05.pdf Preliminary version](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week05/Lecture05Preliminary.pdf)
 
 
 ## Exercises
 
-exercises05.pdf (not yet ready)
+[exercises05.pdf](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week05/exercises05.pdf)
