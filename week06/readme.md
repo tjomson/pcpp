@@ -30,4 +30,4 @@ See file [lecture06.pdf](#).
 
 ## Exercises
 
-See file [exercises06.pdf](#).
+See file [exercises06.pdf](./exercises06.pdf).
