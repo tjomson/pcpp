@@ -31,8 +31,6 @@ public class CounterTest {
 
     private Counter count;
     private CyclicBarrier barrier;
-    // private final static ExecutorService pool
-    // 	= Executors.newCachedThreadPool();
 
     @BeforeEach
     public void initialize() {
@@ -108,7 +106,7 @@ public class CounterTest {
     }
 
 
-    @RepeatedTest(10)
+    @RepeatedTest(100)
     // @Test
     // @Disabled
     public void testingCounterParallelConstant() {
