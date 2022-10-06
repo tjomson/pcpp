@@ -25,7 +25,7 @@ The goals of this lecture are:
  
 ## Lecture slides
 
-See file [lecture06.pdf](#).
+See file [lecture06.pdf](./lecture06.pdf).
 
 
 ## Exercises
