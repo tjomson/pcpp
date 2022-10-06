@@ -6,7 +6,7 @@ The goals of this lecture are:
 * Being able to explain performance measurements
 * Being able to explain and use the Java Executor framework
 * Being able to explain and use Java Futures
-* Being able to explain and use lock splitting
+* Being able to explain and use lock striping
 
 
 ## Readings 
