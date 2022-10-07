@@ -53,8 +53,8 @@ public class BoundedBufferTest {
 			  nrThreads, nrTrials, bufferSize);
 
 	// init buffer
-	buffer  = new BoundedBufferMonitor<Integer>(bufferSize);
-	// buffer  = new BoundedBufferSemaphore<Integer>(bufferSize);
+	// buffer  = new BoundedBufferMonitor<Integer>(bufferSize);
+	buffer  = new BoundedBufferSemaphore<Integer>(bufferSize);
 	
 	// init barrier
 	barrier = new CyclicBarrier((nrThreads*2) + 1);
