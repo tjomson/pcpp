@@ -24,4 +24,4 @@ See file [lecture07.pdf](Not yet ready).
 
 ### Mandatory assignment
 
-See file [exercises07.pdf](Not yet ready).
+See file [exercises07.pdf](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week07/exercises07.pdf).
