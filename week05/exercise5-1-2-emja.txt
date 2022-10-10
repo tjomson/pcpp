@@ -1,0 +1,21 @@
+> Task :app:compileJava
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes
+
+> Task :app:run
+# OS:   Windows 10; 10.0; amd64
+# JVM:  Oracle Corporation; 18.0.2.1
+# CPU:  AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD; 16 "cores"
+# Date: 2022-10-10T15:04:50+0200
+pow                                  47,4 ns       2,22    8388608
+exp                                  19,5 ns       0,89   16777216
+log                                  26,7 ns       0,76   16777216
+sin                                  31,5 ns       1,39    8388608
+cos                                  33,0 ns       1,63    8388608
+tan                                  40,0 ns       0,79    8388608
+asin                                389,1 ns      18,02    1048576
+acos                                353,4 ns       9,97    1048576
+atan                                104,5 ns       2,48    4194304
+
+BUILD SUCCESSFUL in 1m 8s
+3 actionable tasks: 2 executed, 1 up-to-date
