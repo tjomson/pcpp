@@ -24,3 +24,11 @@ Transfer 753 from 2 to 3
 Transfer 3967 from 6 to 3
 <=========----> 75% EXECUTING [3m 32s]
 ```
+
+### 3
+
+We added a print to doNTransactions, as this is the method that each thread calls.
+
+See ThreadsAccountExperimentsMany line 26 and 44
+
+### 4
