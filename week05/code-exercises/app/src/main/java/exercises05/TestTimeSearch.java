@@ -21,7 +21,6 @@ public class TestTimeSearch {
 
     System.out.println("Array Size: "+ lineArray.length);
     System.out.println("# Occurences of "+target+ " :"+search(target, lineArray, 0, lineArray.length, lc));
-    Mark7("par_search32", (x) -> {return (double)countParallelN(target, lineArray, 32, lc);});
 
     Mark7("seq_search", (i) -> {return (double)search(target, lineArray, 0, lineArray.length, lc);});
     for(int i = 1; i <= 32; i++) {
