@@ -1,0 +1,45 @@
+> Task :app:compileJava
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes
+
+> Task :app:run
+# OS:   Linux; 5.15.0-48-generic; amd64
+# JVM:  Private Build; 18.0.2-ea
+# CPU:  null; 8 "cores"
+# Date: 2022-10-10T16:06:44+0200
+countSequential                 9210118.0 ns  355072.46         32
+countParallelN       1          8938547.7 ns  295345.64         32
+countParallelN       2          5617859.8 ns   53996.10         64
+countParallelN       3          4177278.9 ns   52888.21         64
+countParallelN       4          3357343.0 ns   76241.64        128
+countParallelN       5          3537545.8 ns   31142.39        128
+countParallelN       6          3138139.1 ns   15199.82        128
+countParallelN       7          2742315.8 ns   81603.30        128
+countParallelN       8          2672001.6 ns  267831.23        128
+countParallelN       9          3577634.4 ns   37047.87        128
+countParallelN      10          3402494.4 ns   50722.95        128
+countParallelN      11          3198427.7 ns   81320.48        128
+countParallelN      12          3159077.1 ns   90476.66        128
+countParallelN      13          3146109.4 ns   35896.83        128
+countParallelN      14          3024722.7 ns   94347.27        128
+countParallelN      15          2865315.0 ns   67070.09        128
+countParallelN      16          2799071.7 ns  100554.09        128
+countParallelN      17          3161209.6 ns   88385.01        128
+countParallelN      18          3246833.2 ns   64989.23        128
+countParallelN      19          3194721.1 ns   89140.03        128
+countParallelN      20          3123737.9 ns   22242.49        128
+countParallelN      21          3142784.8 ns  118334.25        128
+countParallelN      22          3214736.8 ns  149945.28        128
+countParallelN      23          3156614.4 ns  129732.54        128
+countParallelN      24          3125756.5 ns  115182.51        128
+countParallelN      25          3285936.4 ns  238705.92        128
+countParallelN      26          3125654.3 ns  110644.44        128
+countParallelN      27          3468242.7 ns  694558.62        128
+countParallelN      28          3225398.2 ns   45055.10        128
+countParallelN      29          3303579.6 ns  135983.22        128
+countParallelN      30          3342409.0 ns  113686.18        128
+countParallelN      31          3312307.7 ns  137185.50        128
+countParallelN      32          3333199.9 ns  130182.62        128
+
+BUILD SUCCESSFUL in 4m 19s
+3 actionable tasks: 2 executed, 1 up-to-date
