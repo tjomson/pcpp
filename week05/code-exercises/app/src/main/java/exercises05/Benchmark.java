@@ -15,9 +15,12 @@ class Benchmark {
     //Mark3();
     //Mark4();
     //Mark5();
-    Mark6("multiply", i -> multiply(i));
+    // Mark6("multiply", i -> multiply(i));
     //Mark6("multiply", Benchmark::multiply); // same as line above, for motivation see here https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html
     // Mark7("multiply", Benchmark::multiply);
+    TestVolatile tv = new TestVolatile();
+    Mark7("normal", (i) -> {tv.inc(); return 0.0;});
+    Mark7("volatile", (i) -> {tv.vInc(); return 0.0;});
     // MathFunctionBenchmarks();
     // final java.util.Random rnd = new java.util.Random();
     // final int n = 1638400;
@@ -31,6 +34,17 @@ class Benchmark {
   }
 
   // ========== Example functions and benchmarks ==========
+
+  private class TestVolatile {
+    private volatile int vCtr;
+    private int ctr;
+    public void vInc () {
+      vCtr++;
+    }
+    public void inc () {
+      ctr++;
+    }
+  }
 
   private static double multiply(int i) {
     double x = 1.1 * (double)(i & 0xFF);

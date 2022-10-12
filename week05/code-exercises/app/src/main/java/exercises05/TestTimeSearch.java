@@ -3,6 +3,7 @@ package exercises05;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.IntToDoubleFunction;
+import java.util.concurrent.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,10 +17,36 @@ public class TestTimeSearch {
     final String target= "ipsum";
 
     final LongCounter lc= new LongCounter();
-    String[] lineArray= readWords(filename);
+    String[] lineArray = readWords(filename);
 
     System.out.println("Array Size: "+ lineArray.length);
     System.out.println("# Occurences of "+target+ " :"+search(target, lineArray, 0, lineArray.length, lc));
+    Mark7("par_search32", (x) -> {return (double)countParallelN(target, lineArray, 32, lc);});
+
+    Mark7("seq_search", (i) -> {return (double)search(target, lineArray, 0, lineArray.length, lc);});
+    for(int i = 1; i <= 32; i++) {
+      final int threadCount = i;
+      Mark7("par_search"+i, (x) -> {return (double)countParallelN(target, lineArray, threadCount, lc);});
+    }
+  }
+
+  private static long countParallelN(String target, String[] lineArray, int N, LongCounter lc) {
+    int workPrThread = lineArray.length / N;
+    Thread[] threads = new Thread[N];
+    for(int i = 0; i < N; i++) {
+      final int from = i*workPrThread;
+      int to = (from + workPrThread > lineArray.length)? (i*workPrThread)+(lineArray.length-1) : (i*workPrThread)+workPrThread ;
+      threads[i] = new Thread(() -> {
+        search(target, lineArray, from, to, lc);
+      });
+    }
+    for (int t=0; t<N; t++) 
+      threads[t].start();
+    try {
+      for (int t=0; t<N; t++) 
+        threads[t].join();
+    } catch (InterruptedException exn) { }
+    return lc.get();
   }
 
   static long search(String x, String[] lineArray, int from, int to, LongCounter lc){
