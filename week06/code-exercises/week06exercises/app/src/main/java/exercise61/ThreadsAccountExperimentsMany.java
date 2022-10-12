@@ -1,6 +1,7 @@
 
 package exercise61;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.*;
 
@@ -22,22 +23,24 @@ public class ThreadsAccountExperimentsMany {
     for (int i = 0; i < N; i++) {
       accounts[i] = new Account(i);
     }
+
+    var tasks = new ArrayList<Callable<Object>>();
+
     for (int i = 0; i < NO_THREADS; i++) {
-      pool.execute(() -> doNTransactions(NO_TRANSACTION));
-      // try {
-      //   // (threads[i] = new Thread(() -> doNTransactions(NO_TRANSACTION))).start();
-      // } catch (Error ex) {
-      //   System.out.println("At i = " + i + " I got error: " + ex);
-      //   System.exit(0);
-      // }
+      // Could also be done like this, but won't terminate. Exercise 6.1.3
+      // pool.execute(() -> doNTransactions(NO_TRANSACTION));
+      tasks.add(Executors.callable(new Runner()));
     }
-    // for (int i = 0; i < NO_THREADS; i++) {
-    //   try {
-    //     // threads[i].join();
-    //   } catch (Exception dummy) {
-    //   }
-    //   ;
-    // }
+
+    try {
+      var futures = pool.invokeAll(tasks);
+      for (var future : futures) {
+        future.get();
+      }
+      pool.shutdown();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   private static void doNTransactions(int noTransactions) {
@@ -85,6 +88,13 @@ public class ThreadsAccountExperimentsMany {
 
     public String toString() {
       return "Transfer " + amount + " from " + source.id + " to " + target.id;
+    }
+  }
+
+  static class Runner implements Runnable {
+    @Override
+    public void run() {
+      doNTransactions(NO_TRANSACTION);
     }
   }
 

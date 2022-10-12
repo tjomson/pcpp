@@ -25,10 +25,8 @@ Transfer 3967 from 6 to 3
 <=========----> 75% EXECUTING [3m 32s]
 ```
 
-### 3
+### 3 + 4
 
-We added a print to doNTransactions, as this is the method that each thread calls.
+We added a print to doNTransactions, as this is the method that each thread calls. We also converted the lambda function to a class implementing Runnable.
 
-See ThreadsAccountExperimentsMany line 26 and 44
-
-### 4
+See ThreadsAccountExperimentsMany line 16, 22-44, 94-99
