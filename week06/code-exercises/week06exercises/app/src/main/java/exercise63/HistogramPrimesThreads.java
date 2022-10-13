@@ -9,7 +9,7 @@ public class HistogramPrimesThreads {
     public HistogramPrimesThreads() { 
 
 	// TODO: Replace below with an instance of Histogram2 exercise 6.3.1 (recall that Histogram1 is not thread-safe)
-	final Histogram histogram = new Histogram(25); // 25 bins sufficient for a range of 0..4_999_999
+	final Histogram histogram = new Histogram1(25); // 25 bins sufficient for a range of 0..4_999_999
 
 	// TODO: Run it using multiple threads, and check the countFactors function below (it might be useful)
 

@@ -38,3 +38,21 @@ See ThreadsAccountExperimentsMany line 16, 22-44, 94-99
 See TestCountPrimesThreads.out for the data
 
 We see that it speeds up until 8 threads are used, after which it levels off. This was run on a PC with 16 threads, so we expected it to keep getting better up to 16 threads. We also see huge deviation when 8 threads are used. The local and non-local version seem to perform the same.
+
+## 6.3
+
+### 1
+
+See Histogram2.java
+
+'counts' has been made final to make explicit that the array wont be swithed out, during the objects life time. This might not strictly be nessecary, as the field is not changed by any method, and wont escape.
+
+The constructor has been synchronized on the object itself, so that the contructor must happen before anything else.
+
+'increment' has been synchronized, to ensure that both field are actually incremented.
+
+'getPercentage' has been syncronized, to ensure that the 'getCount' and 'getTotal' are from the same state, otherwise they might not match.
+
+'getSpan' has not be synchronized, as the lenght of the array is constant, and thus will not change in any interleaving.
+
+'getTotal' has been syncronized, as 'total' might change.
