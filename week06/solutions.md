@@ -30,3 +30,11 @@ Transfer 3967 from 6 to 3
 We added a print to doNTransactions, as this is the method that each thread calls. We also converted the lambda function to a class implementing Runnable.
 
 See ThreadsAccountExperimentsMany line 16, 22-44, 94-99
+
+## 6.2
+
+### 1
+
+See TestCountPrimesThreads.out for the data
+
+We see that it speeds up until 8 threads are used, after which it levels off. This was run on a PC with 16 threads, so we expected it to keep getting better up to 16 threads. We also see huge deviation when 8 threads are used. The local and non-local version seem to perform the same.
