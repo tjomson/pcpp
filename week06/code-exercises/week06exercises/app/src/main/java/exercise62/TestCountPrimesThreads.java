@@ -7,8 +7,11 @@ package exercise62;
 // modified jst@itu.dk 2021-09-24
 // raup@itu.dk * 05/10/2022
 import java.util.function.IntToDoubleFunction;
+import java.util.ArrayList;
+import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicLong;
 import benchmarking.Benchmark;
+import java.util.concurrent.*;
 
 public class TestCountPrimesThreads {
 	public static void main(String[] args) {
@@ -45,28 +48,52 @@ public class TestCountPrimesThreads {
 	}
 
 	// General parallel solution, using multiple threads
-	private static long countParallelN(int range, int threadCount) {
+	private long countParallelN(int range, int threadCount) {
 		final int perThread = range / threadCount;
 		final AtomicLong lc = new AtomicLong(0);
-		Thread[] threads = new Thread[threadCount];
+		// Thread[] threads = new Thread[threadCount];
+		ExecutorService pool = Executors.newFixedThreadPool(threadCount);
+		var futures = new ArrayList<Future>();
+
 		for (int t = 0; t < threadCount; t++) {
-			final int from = perThread * t,
-					to = (t + 1 == threadCount) ? range : perThread * (t + 1);
-			threads[t] = new Thread(() -> {
-				for (int i = from; i < to; i++)
-					if (isPrime(i))
-						lc.incrementAndGet();
-			});
+			final int from = perThread * t;
+			final int to = (t + 1 == threadCount) ? range : perThread * (t + 1);
+
+			var fut = pool.submit(new Runner(lc, from, to));
+			futures.add(fut);
 		}
-		for (int t = 0; t < threadCount; t++)
-			threads[t].start();
-		try {
-			for (int t = 0; t < threadCount; t++)
-				threads[t].join();
-			// System.out.println("Primes: "+lc.get());
-		} catch (InterruptedException exn) {
+
+		for (var fut : futures) {
+			while (!fut.isDone()) {
+			}
+			// try {
+			// fut.get();
+			// } catch (Exception e) {
+			// System.out.println("FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUCK");
+			// e.printStackTrace();
+			// }
 		}
 		return lc.get();
+	}
+
+	class Runner implements Runnable {
+		AtomicLong lc;
+		int from;
+		int to;
+
+		Runner(AtomicLong lc, int from, int to) {
+			this.lc = lc;
+			this.from = from;
+			this.to = to;
+		}
+
+		@Override
+		public void run() {
+			for (int i = from; i < to; i++)
+				if (isPrime(i))
+					lc.incrementAndGet();
+		}
+
 	}
 
 	// General parallel solution, using multiple threads
