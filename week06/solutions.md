@@ -45,6 +45,8 @@ See 62stuff.uff for the data
 
 The solution using futures is slightly slower when the threads are 1-6. Higher than that, it gets slower.
 
+See implementation in method countParallelN in TestCountPrimesThreads.java
+
 
 ## 6.3
 
