@@ -39,6 +39,13 @@ See TestCountPrimesThreads.out for the data
 
 We see that it speeds up until 8 threads are used, after which it levels off. This was run on a PC with 16 threads, so we expected it to keep getting better up to 16 threads. We also see huge deviation when 8 threads are used. The local and non-local version seem to perform the same.
 
+### 2
+
+See 62stuff.uff for the data
+
+The solution using futures is slightly slower when the threads are 1-6. Higher than that, it gets slower.
+
+
 ## 6.3
 
 ### 1
