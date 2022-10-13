@@ -9,13 +9,43 @@ public class HistogramPrimesThreads {
     public HistogramPrimesThreads() { 
 
 	// TODO: Replace below with an instance of Histogram2 exercise 6.3.1 (recall that Histogram1 is not thread-safe)
-	final Histogram histogram = new Histogram1(25); // 25 bins sufficient for a range of 0..4_999_999
+	final Histogram histogram = new Histogram2(25); // 25 bins sufficient for a range of 0..4_999_999
 
 	// TODO: Run it using multiple threads, and check the countFactors function below (it might be useful)
+
+	test(histogram, 25);
 
 	// Finally we plot the result to ensure that it looks as expected (see example output in the exercise script)
 	dump(histogram);
     }
+
+	public static Histogram test(Histogram histogram, int thread_count) {
+		final int upTo = 5000000;
+
+		final int workPrThread = upTo / thread_count;
+		final Thread[] threads = new Thread[thread_count];
+
+		for(int i = 0; i < thread_count; i++) {
+			final int index = i;
+			final int to = ((i * workPrThread) + workPrThread > upTo) ? upTo - (i*workPrThread) : workPrThread ;
+			threads[i] = new Thread(() -> {
+				for(int x = 0; x < to; x++) {
+					histogram.increment(countFactors((index*workPrThread)+x));
+				}
+			});
+		}
+
+		for (Thread thread : threads) {
+			thread.start();
+		}
+		for (Thread thread : threads) {
+			try {
+				thread.join();
+			} catch (InterruptedException e) { }
+		}
+
+		return histogram;
+	}
 
     // Returns the number of prime factors of `p`
     public static int countFactors(int p) {

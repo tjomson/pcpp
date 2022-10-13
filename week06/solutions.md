@@ -63,3 +63,24 @@ The constructor has been synchronized on the object itself, so that the contruct
 'getSpan' has not be synchronized, as the lenght of the array is constant, and thus will not change in any interleaving.
 
 'getTotal' has been syncronized, as 'total' might change.
+
+### 2
+
+Yep see Histogram3.java
+
+### 3
+
+Yep see HistogramPerformance.java
+
+### 4
+
+```
+histogram3_8_1               2333647245,0 ns 178780444,34          2
+histogram3_8_2               1994951435,0 ns 89759876,90          2
+histogram3_8_4               1811900085,0 ns 25649389,76          2
+histogram3_8_8               1814181030,0 ns 11707479,03          2
+histogram3_8_16              1820760070,0 ns 6867481,14          2
+histogram3_8_32              1790675725,0 ns 20785448,79          2
+```
+
+There is an increase in performance, as more bins can be accessed at the same time, e.g. incrementing bin 5, does not have to wait for incrementing bin 2 to terminate.

@@ -1,18 +1,26 @@
 package exercise63;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 class Histogram2 implements Histogram {
     private final int[] counts;
     private int total=0;
-
+    private final ReentrantLock total_lock;
+    
     public Histogram2(int span) {
         synchronized (this) {
             this.counts = new int[span];
+            this.total_lock = new ReentrantLock();
         }
     }
 
     public synchronized void increment(int bin) {
-        counts[bin] = counts[bin] + 1;
+        synchronized (this) {    
+            counts[bin] = counts[bin] + 1;
+        }
+        total_lock.lock();
         total++;
+        total_lock.unlock();
     }
 
     public synchronized int getCount(int bin) {
@@ -27,7 +35,10 @@ class Histogram2 implements Histogram {
         return counts.length;
     }
     
-    public synchronized int getTotal(){
-      return total;
+    public int getTotal(){
+        total_lock.lock();
+        var res = total;
+        total_lock.unlock();
+        return res;
     }
 }
