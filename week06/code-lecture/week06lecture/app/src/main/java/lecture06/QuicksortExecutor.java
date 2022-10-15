@@ -29,8 +29,8 @@ public class QuicksortExecutor {
 
     private static void setUpQS(int threadCount, int[] intArray, int threshold, 
 				CyclicBarrier done, AtomicInteger count) {
-	pool = Executors.newFixedThreadPool(threadCount);
-	// pool = Executors.newWorkStealingPool(threadCount);
+	// pool = Executors.newFixedThreadPool(threadCount);
+	pool = Executors.newWorkStealingPool(threadCount);
 	count.set(1); // Initial task count
 	pool.execute( new QuicksortTask( new Problem(intArray, 0, intArray.length-1), 
 					 pool, threshold, 
