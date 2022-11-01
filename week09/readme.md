@@ -31,10 +31,10 @@ from the examples given in the lecture and the code provided in the week 7 repos
 [List of RxJava operators](https://github.com/ReactiveX/RxJava/wiki/Alphabetical-List-of-Observable-Operators) 
 
 ### Exercises for feedback
-[Exercises09.pdf](not yet ready)
+[Exercises09.pdf](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week09/exercises09.pdf)
 
 ### Lecture
-[Lecture09.pdf](not yet ready)
+[Preliminary version of Lecture09.pdf](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week09/lecture09Pre.pdf)
 
-[Code examples used in the lecture](week09/code-lecture) 
+[Code examples used in the lecture](https://github.itu.dk/jst/PCPP2022-Public/tree/main/week09/code-exercises) 
 
