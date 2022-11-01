@@ -31,8 +31,10 @@ from the examples given in the lecture and the code provided in the week 7 repos
 [List of RxJava operators](https://github.com/ReactiveX/RxJava/wiki/Alphabetical-List-of-Observable-Operators) 
 
 ### Exercises for feedback
-(Exercises09.pdf)[not yet ready]
+[Exercises09.pdf](not yet ready)
 
-### Slides
-(Preliminary version of lecture)[not yet ready]
+### Lecture
+[Lecture09.pdf](not yet ready)
+
+[Code examples used in the lecture](week09/code-lecture) 
 
