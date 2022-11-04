@@ -17,7 +17,7 @@ class stopwatchUI {
   final private String allzero = "0:00:00:0";
   private SecCounter lC = new SecCounter(0, false, tf);
 
-  public void updateTime() {
+  public synchronized void updateTime() {
     int desiSeconds = lC.incr();
     int seconds = desiSeconds / 10;
     // Potentila race condition !!!
