@@ -34,7 +34,7 @@ from the examples given in the lecture and the code provided in the week 7 repos
 [Exercises09.pdf](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week09/exercises09.pdf)
 
 ### Lecture
-[Preliminary version of Lecture09.pdf](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week09/lecture09Pre.pdf)
+[Lecture09.pdf](https://github.itu.dk/jst/PCPP2022-Public/blob/main/week09/lecture09.pdf)
 
 [Code examples used in the lecture](https://github.itu.dk/jst/PCPP2022-Public/tree/main/week09/code-exercises) 
 
