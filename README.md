@@ -20,7 +20,7 @@ Each week we will update this repository with the material used in this week.
 | 4       | 38   | [Testing & Verification](week04/)                  | Raúl                          |
 | 5       | 39   | [Performance measurements](week05/)                | Jørgen                        |
 | 6       | 40   | [Performance and scalability](week06/)             | Raúl                          |
-| 7       | 41   | Parallel Streams                                   | Jørgen                        |
+| 7       | 41   | [Parallel Streams](week07/)                        | Jørgen                        |
 |         | 42   | *No Lecture: Fall break*                           |                               |
 | 8       | 43   | Guest lecture                                      | Viet Yen Nguyen (Hypefactors) |
 | 9       | 44   | React                                              | Jørgen                        |
