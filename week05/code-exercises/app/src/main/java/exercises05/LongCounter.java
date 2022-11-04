@@ -8,9 +8,9 @@ class LongCounter {
     return count; 
   }
   public synchronized void add(long c) {
-    // to be filled in
+    count += c;
   }
   public synchronized void reset() {
-    // to be filled in
+    count = 0;
   }
 }

@@ -1,0 +1,79 @@
+j> Task :app:compileJava
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes
+
+> Task :app:run
+# OS:   Linux; 5.15.0-48-generic; amd64
+# JVM:  Private Build; 18.0.2-ea
+# CPU:  null; 8 "cores"
+# Date: 2022-10-10T15:06:59+0200
+[Mark 1]
+ 0.004 s     0.2ns 
+[Mark 2]
+  24.8 ns
+[Mark 3]
+  26.5 ns
+  25.4 ns
+  24.4 ns
+  25.6 ns
+  24.7 ns
+  25.7 ns
+  24.1 ns
+  24.4 ns
+  24.1 ns
+  25.7 ns
+[Mark 4]
+  25.5 ns +/-  0.559
+[Mark 5]
+ 178.6 ns +/-   242.72          2
+  69.0 ns +/-    25.85          4
+  66.2 ns +/-    15.27          8
+  58.6 ns +/-     8.13         16
+  68.9 ns +/-    33.19         32
+  47.6 ns +/-     8.04         64
+  29.5 ns +/-     2.11        128
+  44.0 ns +/-     1.87        256
+  44.3 ns +/-     1.55        512
+  34.2 ns +/-     7.54       1024
+  33.4 ns +/-     7.19       2048
+  36.9 ns +/-     8.74       4096
+  26.2 ns +/-     2.57       8192
+  26.4 ns +/-     1.48      16384
+  25.4 ns +/-     1.33      32768
+  25.5 ns +/-     0.82      65536
+  26.5 ns +/-     1.18     131072
+  26.8 ns +/-     0.54     262144
+  26.9 ns +/-     0.49     524288
+  25.4 ns +/-     1.01    1048576
+  25.0 ns +/-     1.23    2097152
+  24.9 ns +/-     0.95    4194304
+  24.7 ns +/-     0.64    8388608
+  25.2 ns +/-     1.09   16777216
+[Mark 6]
+multiply                            476.4 ns     957.53          2
+multiply                            160.2 ns      45.44          4
+multiply                            213.4 ns      62.85          8
+multiply                            196.7 ns      31.94         16
+multiply                            185.5 ns      17.88         32
+multiply                            348.0 ns     150.16         64
+multiply                             58.1 ns       8.95        128
+multiply                             55.7 ns       2.15        256
+multiply                             56.5 ns       4.92        512
+multiply                             48.8 ns       0.53       1024
+multiply                             49.6 ns       1.41       2048
+multiply                             49.4 ns       3.31       4096
+multiply                             26.3 ns       1.93       8192
+multiply                             26.3 ns       1.35      16384
+multiply                             25.4 ns       1.12      32768
+multiply                             24.7 ns       1.52      65536
+multiply                             25.1 ns       1.12     131072
+multiply                             25.3 ns       1.28     262144
+multiply                             25.0 ns       1.28     524288
+multiply                             24.7 ns       0.68    1048576
+multiply                             25.3 ns       1.28    2097152
+multiply                             26.4 ns       1.29    4194304
+multiply                             24.2 ns       0.54    8388608
+multiply                             24.0 ns       0.22   16777216
+
+BUILD SUCCESSFUL in 1m 10s
+3 actionable tasks: 2 executed, 1 up-to-date

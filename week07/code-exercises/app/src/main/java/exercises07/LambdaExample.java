@@ -1,6 +1,6 @@
 package exercises07;
 // Simple Lambda example
-// jst@itu.dk * 2022-09-12 Simple example to illustrate use of Lambda
+// jst@itu.dk * 2022-10-10 Simple example to illustrate use of Lambda
 
 import java.util.function.Function;
 
@@ -13,5 +13,8 @@ class LambdaExample {
 
   Function<Integer, Integer> f = (x) -> x+1;
 
-  private static int increment(Function<Integer, Integer> add1) { return add1.apply(2);}
+   private static int increment(Function<Integer, Integer> add1) {
+    return -1; //call of f to-be-filled in
+  }
+
 }

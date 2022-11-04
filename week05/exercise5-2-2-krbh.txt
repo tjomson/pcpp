@@ -1,0 +1,21 @@
+> Task :app:compileJava
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes
+
+> Task :app:run
+# OS:   Linux; 5.15.0-48-generic; amd64
+# JVM:  Private Build; 18.0.2-ea
+# CPU:  null; 8 "cores"
+# Date: 2022-10-10T15:59:02+0200
+Mark 6 measurements
+hashCode()                            2.5 ns       0.02  134217728
+Point creation                       36.0 ns       0.78    8388608
+Thread's work                      5396.4 ns     136.42      65536
+Thread create                       619.0 ns      10.19     524288
+Thread create start               47576.1 ns     995.09       8192
+Thread create start join          76897.2 ns    1894.72       4096
+ai value = 1556420000
+Uncontended lock                     17.6 ns       0.14   16777216
+
+BUILD SUCCESSFUL in 47s
+3 actionable tasks: 2 executed, 1 up-to-date

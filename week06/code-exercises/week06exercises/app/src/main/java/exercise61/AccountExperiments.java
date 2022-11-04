@@ -18,6 +18,7 @@ public class AccountExperiments {
       accounts[i] = new Account(i);
     }
     //insert code using Mark7 to measure execution time
+    Benchmark.Mark7("stuff", i -> doNTransactions(NO_TRANSACTION));
   }
 
   private static double doNTransactions(int noTransactions){

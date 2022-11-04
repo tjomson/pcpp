@@ -1,0 +1,21 @@
+> Task :app:compileJava UP-TO-DATE
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes UP-TO-DATE
+
+> Task :app:run
+# OS:   Linux; 5.15.0-48-generic; amd64
+# JVM:  Private Build; 18.0.2-ea
+# CPU:  null; 8 "cores"
+# Date: 2022-10-10T15:36:31+0200
+pow                                  18.2 ns       0.48   16777216
+exp                                  20.6 ns       0.16   16777216
+log                                  11.3 ns       0.41   33554432
+sin                                  14.2 ns       0.40   33554432
+cos                                  14.2 ns       0.53   33554432
+tan                                  19.5 ns       0.45   16777216
+asin                                 69.8 ns       0.57    4194304
+acos                                 72.7 ns       1.97    4194304
+atan                                 20.9 ns       1.05   16777216
+
+BUILD SUCCESSFUL in 1m 5s
+3 actionable tasks: 1 executed, 2 up-to-date
