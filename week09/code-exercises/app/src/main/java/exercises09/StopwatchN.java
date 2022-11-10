@@ -13,11 +13,11 @@ import java.util.concurrent.TimeUnit;
 
 public class StopwatchN {
     public static void main(String[] args) {
-        new StopwatchN(2);
+        new StopwatchN(8);
     }
 
     final static JFrame f = new JFrame("Stopwatch");
-    private final ArrayList<stopwatchUI> uis = new ArrayList<>();
+    private ArrayList<stopwatchUI> uis = new ArrayList<>();
 
     // Setting up the three streams for the Buttons and the display
 
@@ -25,7 +25,7 @@ public class StopwatchN {
         f.setBounds(0, 0, 220 * n, 220);
         f.setLayout(null);
         for (int i = 0; i < n; i++) {
-            uis.add(new stopwatchUI(220 * (n - 1), f));
+            uis.add(new stopwatchUI(220 * (i), f));
         }
         f.setVisible(true);
 
