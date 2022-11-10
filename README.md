@@ -23,8 +23,8 @@ Each week we will update this repository with the material used in this week.
 | 7       | 41   | [Parallel Streams](week07/)                        | Jørgen                        |
 |         | 42   | *No Lecture: Fall break*                           |                               |
 | 8       | 43   | Guest lecture                                      | Viet Yen Nguyen (Hypefactors) |
-| 9       | 44   | React                                              | Jørgen                        |
-| 10      | 45   | Lock free data structures                          | Raúl                          |
+| 9       | 44   | [React](week09/)                                   | Jørgen                        |
+| 10      | 45   | [Lock free data structures](week10/)               | Raúl                          |
 | 11      | 46   | Message passing I                                  | Raúl                          |
 | 12      | 47   | Message passing II                                 | Raúl                          |
 | 13      | 48   | TBD                                                | Frederik                      |
