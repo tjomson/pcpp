@@ -66,3 +66,8 @@ It then subscribes to each observer, and prints the length of each string
 
 ## 9.3
 
+### 1
+
+See StopwatchEx.java line 31
+
+### 2
