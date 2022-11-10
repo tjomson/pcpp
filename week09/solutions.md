@@ -79,4 +79,4 @@ See StopwatchUIObservable.java
 
 ### 1-5
 
-See FileRead.java
+See FileRead.java, and use ```gradle run -PmainClass="exercises09.FileRead" --args=".\src\main\resources\english-words.txt"```
