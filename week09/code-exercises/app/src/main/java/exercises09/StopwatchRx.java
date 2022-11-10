@@ -21,7 +21,7 @@ public class StopwatchRx {
   final static JFrame f = new JFrame("Stopwatch");
 
   // Setting up the three streams for the Buttons and the display
-  final static stopwatchUI myUI = new stopwatchUI(0, f);
+  final static StopwatchUIObservable myUI = new StopwatchUIObservable(0, f);
 
   public StopwatchRx() {
     f.setBounds(0, 0, 220, 220);
