@@ -20,6 +20,7 @@ The goals of this lecture are:
 ### Optional readings
 
 * Herlihy:
+  * Chapter 3, Section 3.8.
   * Chapter 9, complete but with emphasis on Section 9.8.
   * Chapter 5, complete (theoretical analysis, read it only if you are interested in why we need compare-and-swap).
   
@@ -28,8 +29,9 @@ The goals of this lecture are:
   
 ## Lecture slides
 
-To appear.
+See file [lecture10.pdf](./lecture10.pdf).
+
 
 ## Exercises
 
-To appear.
+See file [exercises10.pdf](./exercises10.pdf).
