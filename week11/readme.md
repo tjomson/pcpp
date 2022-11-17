@@ -26,8 +26,9 @@ The goals of this lecture are:
 
 ## Lecture slides
 
-To appear.
+See file [lecture11.pdf](./lecture11.pdf).
+
 
 ## Exercises
 
-To appear.
+See file [exercises11.pdf](./exercises11.pdf).
