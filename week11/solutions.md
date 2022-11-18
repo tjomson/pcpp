@@ -39,3 +39,7 @@ See onPayment() in MobileApp.java
 See onPrintBalance() in Account.java
 
 The balance is printed before, because the order of the messages are not synchronized. As it takes more steps to update the balance, it happens later.
+
+## 8
+
+No. One message is handled (popped from the mailbox) at a time , and the order of deposits does not matter.
