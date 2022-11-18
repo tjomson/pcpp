@@ -7,34 +7,45 @@ import akka.actor.typed.javadsl.*;
 public class Account extends AbstractBehavior<Account.AccountCommand> {
 
     /* --- Messages ------------------------------------- */
-    public interface AccountCommand { }
+    public interface AccountCommand {
+    }
+
     // Feel free to add message types at your convenience
-    
+
+    public static final class Deposit implements AccountCommand {
+        public final int amount;
+
+        public Deposit(int amount) {
+            this.amount = amount;
+        }
+    }
 
     /* --- State ---------------------------------------- */
-    // To be Implemented
-    
+    private int balance = 0;
 
     /* --- Constructor ---------------------------------- */
     // Feel free to extend the contructor at your convenience
     private Account(ActorContext<AccountCommand> context) {
-	super(context);
+        super(context);
     }
-    
 
     /* --- Actor initial state -------------------------- */
-    @Override
-    public Receive<AccountCommand> createReceive() {
-	return newReceiveBuilder()
-	    // To be implemented
-	    .build();
+    public static Behavior<AccountCommand> create(ActorRef<Bank.BankCommand> bankActor) {
+        return Behaviors.setup(Account::new);
     }
-    
 
     /* --- Message handling ----------------------------- */
-    // To be Implemented
-    
+    @Override
+    public Receive<AccountCommand> createReceive() {
+        return newReceiveBuilder()
+                .onMessage(Deposit.class, this::onDeposit)
+                .build();
+    }
 
     /* --- Handlers ------------------------------------- */
-    // To be Implemented
+
+    private Behavior<AccountCommand> onDeposit(Deposit msg) {
+        this.balance += msg.amount;
+        return this;
+    }
 }
