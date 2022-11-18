@@ -30,7 +30,7 @@ public class Account extends AbstractBehavior<Account.AccountCommand> {
     }
 
     /* --- Actor initial state -------------------------- */
-    public static Behavior<AccountCommand> create(ActorRef<Bank.BankCommand> bankActor) {
+    public static Behavior<AccountCommand> create() {
         return Behaviors.setup(Account::new);
     }
 
