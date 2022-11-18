@@ -13,3 +13,9 @@ In guardian, we make a new ActorSystem to initialize the system, and we give it 
 See Account.java
 
 Added the state "balance". Added a message Deposit, that will add or subtract to the balance. When initialized, balance is 0;
+
+## 3
+
+See Bank.java
+
+It has no state. It has one message (Transaction), which subtracts the amount from a1 and adds the amount to a2.
