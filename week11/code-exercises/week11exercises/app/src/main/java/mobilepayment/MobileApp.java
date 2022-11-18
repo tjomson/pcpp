@@ -57,7 +57,12 @@ public class MobileApp extends AbstractBehavior<MobileApp.MobileAppCommand> {
 
     /* --- Handlers ------------------------------------- */
     private Behavior<MobileAppCommand> onPayment(Payment msg) {
-        msg.b1.tell(new Bank.Transaction(msg.a1, msg.a2, msg.amount));
+        // msg.b1.tell(new Bank.Transaction(msg.a1, msg.a2, msg.amount));
+        var stream = new Random().ints();
+        var ite = stream.iterator();
+        for (int i = 0; i < 100; i++) {
+            msg.b1.tell(new Bank.Transaction(msg.a1, msg.a2, ite.nextInt()));
+        }
         return this;
     }
 }

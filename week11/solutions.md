@@ -29,3 +29,8 @@ One message (Payment), that takes two accounts, a bank, and an amount. When this
 ## 5
 
 See onKickOff() in Guardian.java
+
+## 6
+
+See onPayment() in MobileApp.java
+
