@@ -25,3 +25,7 @@ It has no state. It has one message (Transaction), which subtracts the amount fr
 See MobileApp.java
 
 One message (Payment), that takes two accounts, a bank, and an amount. When this message is received, it tells the given bank to make a transaction.
+
+## 5
+
+See onKickOff() in Guardian.java

@@ -37,7 +37,15 @@ public class Guardian extends AbstractBehavior<Guardian.GuardianCommand> {
 
     /* --- Handlers ------------------------------------- */
     private Behavior<GuardianCommand> onKickOff(KickOff msg) {
-        ActorRef<MobileApp.MobileAppCommand> app = getContext().spawn(MobileApp.create(), "g");
+        ActorRef<MobileApp.MobileAppCommand> app1 = getContext().spawn(MobileApp.create(), "app1");
+        ActorRef<MobileApp.MobileAppCommand> app2 = getContext().spawn(MobileApp.create(), "app2");
+        ActorRef<Bank.BankCommand> bank1 = getContext().spawn(Bank.create(), "bank1");
+        ActorRef<Bank.BankCommand> bank2 = getContext().spawn(Bank.create(), "bank2");
+        ActorRef<Account.AccountCommand> acc1 = getContext().spawn(Account.create(), "acc1");
+        ActorRef<Account.AccountCommand> acc2 = getContext().spawn(Account.create(), "acc2");
+
+        app1.tell(new MobileApp.Payment(acc1, acc2, bank1, 200));
+        app1.tell(new MobileApp.Payment(acc2, acc1, bank2, 300));
 
         return this;
     }
