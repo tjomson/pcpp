@@ -19,3 +19,9 @@ Added the state "balance". Added a message Deposit, that will add or subtract to
 See Bank.java
 
 It has no state. It has one message (Transaction), which subtracts the amount from a1 and adds the amount to a2.
+
+## 4
+
+See MobileApp.java
+
+One message (Payment), that takes two accounts, a bank, and an amount. When this message is received, it tells the given bank to make a transaction.
