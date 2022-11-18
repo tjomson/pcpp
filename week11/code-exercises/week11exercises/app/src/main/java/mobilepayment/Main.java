@@ -6,27 +6,29 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) {
-    
-	// start actor system
-	// To be implemented
+	public static void main(String[] args) {
+		final ActorSystem<Guardian.GuardianCommand> system = ActorSystem.create(Guardian.create(), "bank");
 
-	// init message
-	// To be implemented
+		system.tell(new Guardian.KickOff());
 
-	// wait until user presses enter
-	try {
-	    System.out.println(">>> Press ENTER to exit <<<");
-	    System.in.read();
+		// start actor system
+		// To be implemented
+
+		// init message
+		// To be implemented
+
+		// wait until user presses enter
+		try {
+			System.out.println(">>> Press ENTER to exit <<<");
+			System.in.read();
+		} catch (IOException e) {
+			System.out.println("Error " + e.getMessage());
+			e.printStackTrace();
+		} finally {
+			// terminate actor system execution
+			// To be implemented
+		}
+
 	}
-	catch (IOException e) {
-	    System.out.println("Error " + e.getMessage());
-	    e.printStackTrace();
-	} finally {
-	    // terminate actor system execution
-	    // To be implemented
-	}
-    
-    }
-    
+
 }

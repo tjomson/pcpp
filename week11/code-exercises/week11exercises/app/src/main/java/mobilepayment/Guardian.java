@@ -7,33 +7,38 @@ import akka.actor.typed.javadsl.*;
 public class Guardian extends AbstractBehavior<Guardian.GuardianCommand> {
 
     /* --- Messages ------------------------------------- */
-    public interface GuardianCommand { }
+    public interface GuardianCommand {
+    }
+
+    public static final class KickOff implements GuardianCommand {
+    }
     // Feel free to add message types at your convenience
 
     /* --- State ---------------------------------------- */
     // empty
 
-
     /* --- Constructor ---------------------------------- */
     private Guardian(ActorContext<GuardianCommand> context) {
-	super(context);
+        super(context);
     }
 
-
     /* --- Actor initial state -------------------------- */
-    // To be implemented
-    
+    public static Behavior<GuardianCommand> create() {
+        return Behaviors.setup(Guardian::new);
+    }
 
     /* --- Message handling ----------------------------- */
     @Override
     public Receive<GuardianCommand> createReceive() {
-	return newReceiveBuilder()
-	    // To be implemented
-	    .build();
+        return newReceiveBuilder()
+                .onMessage(KickOff.class, this::onKickOff)
+                .build();
     }
 
-
     /* --- Handlers ------------------------------------- */
-    // To be implemented
-}
+    private Behavior<GuardianCommand> onKickOff(KickOff msg) {
+        ActorRef<MobileApp.MobileAppCommand> app = getContext().spawn(MobileApp.create(), "g");
 
+        return this;
+    }
+}
