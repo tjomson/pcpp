@@ -42,6 +42,7 @@ class PrimeCountingPerf {
   // IntStream solution
   private static long countIntStream(int range) {
     return IntStream.range(2, range)
+        .parallel()
         .filter(x -> isPrime(x))
         // .map(x -> {
         // System.out.println(x);

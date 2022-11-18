@@ -2,7 +2,10 @@
 
 ## 7.2
 
+See PrimeCounntingPerf.java for all
+
 ### 1
+
 
 Results:
 ```

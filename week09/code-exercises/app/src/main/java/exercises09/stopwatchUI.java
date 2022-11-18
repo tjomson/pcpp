@@ -17,17 +17,20 @@ class stopwatchUI {
   final private String allzero = "0:00:00:0";
   private SecCounter lC = new SecCounter(0, false, tf);
 
-  public synchronized void updateTime() {
-    int desiSeconds = lC.incr();
-    int seconds = desiSeconds / 10;
-    // Potentila race condition !!!
-    if (seconds >= 0) {
-      int hours = seconds / 3600;
-      int minutes = (seconds % 3600) / 60;
-      int secs = seconds % 60;
-      int desis = desiSeconds % 10;
-      String time = String.format(Locale.getDefault(), "%d:%02d:%02d:%d", hours, minutes, secs, desis);
-      tf.setText(time);
+  public void updateTime() {
+    synchronized(lc) {
+
+      int desiSeconds = lC.incr();
+      int seconds = desiSeconds / 10;
+      // Potentila race condition !!!
+      if (seconds >= 0) {
+        int hours = seconds / 3600;
+        int minutes = (seconds % 3600) / 60;
+        int secs = seconds % 60;
+        int desis = desiSeconds % 10;
+        String time = String.format(Locale.getDefault(), "%d:%02d:%02d:%d", hours, minutes, secs, desis);
+        tf.setText(time);
+      }
     }
   };
 

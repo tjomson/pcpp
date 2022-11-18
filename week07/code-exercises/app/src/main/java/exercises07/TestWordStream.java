@@ -60,7 +60,7 @@ public class TestWordStream {
   }
 
   // 3
-  public static void moreThan22Letters(Stream<String> stream) {
+  public static void moreThanOrEqualTo22Letters(Stream<String> stream) {
     stream.filter(x -> x.length() >= 22).forEach(System.out::println);
   }
 
