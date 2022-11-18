@@ -34,3 +34,8 @@ See onKickOff() in Guardian.java
 
 See onPayment() in MobileApp.java
 
+## 7
+
+See onPrintBalance() in Account.java
+
+The balance is printed before, because the order of the messages are not synchronized. As it takes more steps to update the balance, it happens later.

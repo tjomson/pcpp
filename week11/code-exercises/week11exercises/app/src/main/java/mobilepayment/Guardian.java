@@ -46,6 +46,8 @@ public class Guardian extends AbstractBehavior<Guardian.GuardianCommand> {
 
         app1.tell(new MobileApp.Payment(acc1, acc2, bank1, 200));
         app1.tell(new MobileApp.Payment(acc2, acc1, bank2, 300));
+        acc1.tell(new Account.PrintBalance());
+        acc2.tell(new Account.PrintBalance());
 
         return this;
     }
