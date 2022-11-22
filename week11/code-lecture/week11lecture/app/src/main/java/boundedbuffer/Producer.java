@@ -43,12 +43,15 @@ public class Producer extends AbstractBehavior<Producer.ProducerCommand> {
 
     /* --- Handlers ------------------------------------- */
     public Behavior<ProducerCommand> onElementAdded(ElementAdded msg) {
-	this.getContext().getLog().info("Element added!");
+	this.getContext().getLog().info("{}: Element added!",
+					getContext().getSelf().path().name());
 	return this;
     }
 
     public Behavior<ProducerCommand> onBufferFull(BufferFull msg) {
-	this.getContext().getLog().info("Trying to add {} again", toAdd);
+	this.getContext().getLog().info("{}: Trying to add {} again", 
+					getContext().getSelf().path().name(),
+					toAdd);
 	boundedBuffer.tell(new BoundedBuffer.Put(getContext().getSelf(), toAdd));
 	return this;
     }

@@ -44,7 +44,6 @@ application {
     mainClassName = project.hasProperty("mainClass") ? project.getProperty("mainClass") : "NULL"
 }
 
-
 run {
     // Use stdin
     standardInput = System.in

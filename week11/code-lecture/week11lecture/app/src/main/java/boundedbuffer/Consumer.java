@@ -41,12 +41,15 @@ public class Consumer extends AbstractBehavior<Consumer.ConsumerCommand> {
 
     /* --- Handlers ------------------------------------- */
     public Behavior<ConsumerCommand> onGet(Get msg) {
-	this.getContext().getLog().info("Element {} obtained!", msg.elem);
+	this.getContext().getLog().info("{}: Element {} obtained!", 
+					getContext().getSelf().path().name(),
+					msg.elem);
 	return this;
     }
 
     public Behavior<ConsumerCommand> onBufferEmpty(BufferEmpty msg) {
-	this.getContext().getLog().info("Trying to get again");
+	this.getContext().getLog().info("{}: Trying to get again",
+					getContext().getSelf().path().name());
 	boundedBuffer.tell(new BoundedBuffer.Get(getContext().getSelf()));
 	return this;
     }

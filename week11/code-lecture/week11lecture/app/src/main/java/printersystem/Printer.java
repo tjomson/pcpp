@@ -16,7 +16,7 @@ public class Printer extends AbstractBehavior<Printer.PrinterCommand> {
 
 	public StoreString(String string) {
 	    this.string = string;
-	}	
+	}
     }
 
     public static final class PrintHistory implements PrinterCommand { }
