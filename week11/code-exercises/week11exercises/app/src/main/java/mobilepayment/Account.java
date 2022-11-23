@@ -20,6 +20,9 @@ public class Account extends AbstractBehavior<Account.AccountCommand> {
         }
     }
 
+    public static final class PrintBalance implements AccountCommand {
+    }
+
     /* --- State ---------------------------------------- */
     private int balance = 0;
 
@@ -39,6 +42,7 @@ public class Account extends AbstractBehavior<Account.AccountCommand> {
     public Receive<AccountCommand> createReceive() {
         return newReceiveBuilder()
                 .onMessage(Deposit.class, this::onDeposit)
+                .onMessage(PrintBalance.class, this::onPrintBalance)
                 .build();
     }
 
@@ -46,6 +50,12 @@ public class Account extends AbstractBehavior<Account.AccountCommand> {
 
     private Behavior<AccountCommand> onDeposit(Deposit msg) {
         this.balance += msg.amount;
+        super.getContext().getLog().info("Depositting " + msg.amount);
+        return this;
+    }
+
+    private Behavior<AccountCommand> onPrintBalance(PrintBalance msg) {
+        super.getContext().getLog().info("Balance: " + this.balance);
         return this;
     }
 }
