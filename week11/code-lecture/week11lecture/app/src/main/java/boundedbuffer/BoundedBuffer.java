@@ -63,7 +63,7 @@ public class BoundedBuffer extends AbstractBehavior<BoundedBuffer.BoundedBufferC
     public Behavior<BoundedBufferCommand> onGet(Get msg) {
 	this.getContext()
 	    .getLog()
-	    .info("Consumer {} tries to get an element", 
+	    .info("{} tries to get an element", 
 		  msg.sender.path().name());
 
 	if(buffer.size() > 0) {
@@ -81,7 +81,7 @@ public class BoundedBuffer extends AbstractBehavior<BoundedBuffer.BoundedBufferC
     public Behavior<BoundedBufferCommand> onPut(Put msg) {
 	this.getContext()
 	    .getLog()
-	    .info("Producer {} wants to add: {}", 
+	    .info("{} wants to add: {}", 
 		  msg.sender.path().name(),
 		  msg.elem);
 
