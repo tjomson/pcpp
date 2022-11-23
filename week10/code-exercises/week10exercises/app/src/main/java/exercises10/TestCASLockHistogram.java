@@ -22,10 +22,7 @@ class TestCASLockHistogram {
 
 			Mark7("Testing histogram cas, " + noThreads + " threads", i -> {
 				countParallel(span, noThreads, histogramCas);
-				var sum = 0;
-				for (int j = 0; j < span; j++)
-					sum += histogramCas.getCount(j);
-				return sum;
+				return 0;
 			});
 		}
 
@@ -34,10 +31,7 @@ class TestCASLockHistogram {
 
 			Mark7("Testing histogram locks, " + noThreads + " threads", i -> {
 				countParallel(span, noThreads, histogramLock);
-				var sum = 0;
-				for (int j = 0; j < span; j++)
-					sum += histogramLock.getCount(j);
-				return sum;
+				return 0;
 			});
 		}
 

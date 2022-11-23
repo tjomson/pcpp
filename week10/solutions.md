@@ -22,16 +22,16 @@ See TestCASLockHistogram.java main() method
 Results when span is 1.000.000:
 
 ```
-Testing histogram cas, 1 threads       853240430,9 ns 7686438,74          2
-Testing histogram cas, 2 threads       542230997,6 ns 10042137,59         2
-Testing histogram cas, 4 threads       306542487,4 ns 8229201,90          2
-Testing histogram cas, 8 threads       179566979,4 ns 8607048,59          2
-Testing histogram cas, 16 threads      138664907,4 ns 11244760,18         2
-Testing histogram locks, 1 threads     866044139,7 ns 8026594,06          2
-Testing histogram locks, 2 threads     588620253,2 ns 7807706,19          2
-Testing histogram locks, 4 threads     394879937,9 ns 4882654,12          2
-Testing histogram locks, 8 threads     414695973,1 ns 21604576,65         2
-Testing histogram locks, 16 threads    385323096,9 ns 22942049,94         2
+Testing histogram cas, 1 threads        857915590,0 ns 51830611,53         2
+Testing histogram cas, 2 threads        548234276,0 ns 6494529,42          2
+Testing histogram cas, 4 threads        305651493,4 ns 11044877,77         2
+Testing histogram cas, 8 threads        179843784,1 ns 18481733,80         2
+Testing histogram cas, 16 threads       141132102,2 ns 9254626,47          2
+Testing histogram locks, 1 threads      846449209,5 ns 13350060,22         2
+Testing histogram locks, 2 threads      585966394,2 ns 6279124,90          2
+Testing histogram locks, 4 threads      390255437,4 ns 7485267,73          2
+Testing histogram locks, 8 threads      420165326,4 ns 34584943,15         2
+Testing histogram locks, 16 threads     422686380,7 ns 24813023,06         2
 ```
 
 The CAS-solution is faster. This makes sense, as Histogram2 does not use lock striping, so all threads are have to fight over the same lock. 
