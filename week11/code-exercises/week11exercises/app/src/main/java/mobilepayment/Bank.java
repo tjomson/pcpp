@@ -86,6 +86,7 @@ public class Bank extends AbstractBehavior<Bank.BankCommand> {
 
     private Behavior<BankCommand> onRejection(RejectTransaction msg) {
         try {
+            if (!ongoingTransactions.contains(msg.rejected)) return this;
             System.out.println("Transaction " +msg.rejected.from+ " --["+msg.rejected.amount+"]-> " +msg.rejected.to+ " rejected: " + msg.reason);
             ongoingTransactions.remove(msg.rejected);
         } catch (Exception e) {
@@ -96,6 +97,7 @@ public class Bank extends AbstractBehavior<Bank.BankCommand> {
 
     private Behavior<BankCommand> onAcceptance(AcceptTransaction msg) {
         try {
+            if (!ongoingTransactions.contains(msg.accepted)) return this;
             System.out.println("Transaction " +msg.accepted.from+ " --["+msg.accepted.amount+"]-> " +msg.accepted.to+ " accepted");
             msg.accepted.to.tell(new Account.Deposit(msg.accepted, msg.accepted.amount));
         } catch (Exception e) {
@@ -106,6 +108,7 @@ public class Bank extends AbstractBehavior<Bank.BankCommand> {
 
     private Behavior<BankCommand> onFinish(FinishTransaction msg) {
         try {
+            if (!ongoingTransactions.contains(msg.finished)) return this;
             System.out.println("Transaction " +msg.finished.from+ " --["+msg.finished.amount+"]-> " +msg.finished.to+ " finished");
             ongoingTransactions.remove(msg.finished);
         } catch (Exception e) {
