@@ -36,3 +36,23 @@ Testing histogram locks, 16 threads     422686380,7 ns 24813023,06         2
 
 The CAS-solution is faster. This makes sense, as Histogram2 does not use lock striping, so all threads are have to fight over the same lock. 
 This is not the case for CAS, as each bin is its own atomic int.
+
+## 10.2
+
+### 1
+
+See writerTryLock() in ReadWriteCASLock.java
+
+### 2
+
+See writerUnlock() in ReadWriteCASLock.java
+
+Also added throws declaration to interface
+
+### 3
+
+See readerTryLock() in ReadWriteCASLock.java
+
+### 4
+
+See readerUnlock(), remove(), and contains() in ReadWriteCASLock.java
