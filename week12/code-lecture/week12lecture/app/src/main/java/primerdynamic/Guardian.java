@@ -38,7 +38,7 @@ public class Guardian extends AbstractBehavior<Guardian.KickOff> {
     public Behavior<KickOff> onKickOff(KickOff msg) {
 
 	// Number of primes to check
-	final int N = 10_000;
+	final int N = 1_000_000;
 	
 	// spawn the primer server
 	final ActorRef<Primer.PrimerCommand> primerServer =
