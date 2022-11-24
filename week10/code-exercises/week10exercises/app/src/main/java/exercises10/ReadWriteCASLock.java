@@ -47,7 +47,6 @@ class ReadWriteCASLock implements SimpleRWTryLockInterface {
     // 10.2.2
     public void writerUnlock() throws Exception {
         var curr = holders.get();
-        holders.get().thread.equals(Thread.currentThread());
         if (curr.thread.equals(Thread.currentThread())) {
             holders.compareAndSet(curr, null);
         } else {
