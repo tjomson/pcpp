@@ -56,3 +56,11 @@ See readerTryLock() in ReadWriteCASLock.java
 ### 4
 
 See readerUnlock(), remove(), and contains() in ReadWriteCASLock.java
+
+### 5
+
+See TestCasLockSeq() in TestLocks.java
+
+### 6
+
+See TestCasLockPar(), and createWriter() in TestLocks.java
