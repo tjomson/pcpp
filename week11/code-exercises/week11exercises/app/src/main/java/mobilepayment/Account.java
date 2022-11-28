@@ -23,16 +23,17 @@ public class Account extends AbstractBehavior<Account.AccountCommand> {
     
 
     /* --- Actor initial state -------------------------- */
+    // To be Implemented
+    
+
+    /* --- Message handling ----------------------------- */
     @Override
     public Receive<AccountCommand> createReceive() {
 	return newReceiveBuilder()
 	    // To be implemented
 	    .build();
     }
-    
 
-    /* --- Message handling ----------------------------- */
-    // To be Implemented
     
 
     /* --- Handlers ------------------------------------- */
