@@ -133,5 +133,5 @@ Below is the list of mandatory readings organized by weeks, thus there are parts
 <details>	
 <summary><h3>Week 13</h3></summary>
 
-- TBD
+- For this week, there are no mandatory readings for the exam.
 </details>
