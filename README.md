@@ -27,7 +27,7 @@ Each week we will update this repository with the material used in this week.
 | 10      | 45   | [Lock free data structures](week10/)               | Raúl                          |
 | 11      | 46   | [Message passing I](week11/)                       | Raúl                          |
 | 12      | 47   | [Message passing II](week12/)                      | Raúl                          |
-| 13      | 48   | TBD                                                | Frederik                      |
+| 13      | 48   | [Atomicity ?](week13/)                             | Jørgen+Raúl                   |
 | 14      | 49   | Exam prep                                          | Jørgen+Raúl                   |
 
 
