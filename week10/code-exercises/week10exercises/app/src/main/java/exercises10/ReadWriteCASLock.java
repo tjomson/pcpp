@@ -29,7 +29,7 @@ class ReadWriteCASLock implements SimpleRWTryLockInterface {
     public void readerUnlock() throws Exception {
         var curr = holders.get();
 
-        if (holders == null || curr.getClass() != ReaderList.class
+        if (curr == null || curr.getClass() != ReaderList.class
                 || !((ReaderList) curr).contains(Thread.currentThread())) {
             throw new Exception("Trying to unlock thread that does not hold lock");
         }
@@ -91,8 +91,8 @@ class ReadWriteCASLock implements SimpleRWTryLockInterface {
             ReaderList newList = null;
             var curr = this;
             while (curr != null) {
-                if (this.thread != toRemove) {
-                    newList = new ReaderList(this.thread, newList);
+                if (curr.thread != toRemove) {
+                    newList = new ReaderList(curr.thread, newList);
                 }
                 curr = curr.next;
             }
